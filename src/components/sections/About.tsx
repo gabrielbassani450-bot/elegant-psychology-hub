@@ -1,6 +1,6 @@
 import { AnimatedSection, AnimatedScale } from "@/components/AnimatedSection";
 import { MessageCircle } from "lucide-react";
-import portraitImage from "@/assets/psychologist-portrait.jpg";
+import portraitImage from "@/assets/psychologist-portrait.png";
 
 export const About = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=555481205788";
