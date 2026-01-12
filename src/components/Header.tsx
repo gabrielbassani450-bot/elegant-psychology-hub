@@ -25,12 +25,12 @@ export const Header = () => {
   return (
     <>
       <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
           isScrolled 
-            ? "bg-background/80 backdrop-blur-xl shadow-sm" 
+            ? "bg-white/70 dark:bg-background/70 backdrop-blur-2xl shadow-[0_1px_30px_-10px_rgba(0,0,0,0.1)] border-b border-white/20" 
             : "bg-transparent"
         }`}
       >
