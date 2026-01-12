@@ -1,4 +1,4 @@
-import { AnimatedSection } from "@/components/AnimatedSection";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { Brain, Heart, Users } from "lucide-react";
 
 const services = [
@@ -24,7 +24,7 @@ const services = [
 
 export const Services = () => {
   return (
-    <section className="section-padding section-alt-bg">
+    <section className="section-padding relative">
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="body-md text-muted-foreground mb-4 block">
@@ -36,14 +36,13 @@ export const Services = () => {
           </h2>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <AnimatedSection 
-              key={service.title} 
-              delay={0.1 + index * 0.15}
-              className="bg-card rounded-3xl p-10 card-elevated group"
+        <StaggerContainer className="grid lg:grid-cols-3 gap-8" staggerDelay={0.15}>
+          {services.map((service) => (
+            <StaggerItem 
+              key={service.title}
+              className="glass-card rounded-3xl p-10 group"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent mb-8 transition-transform duration-300 group-hover:scale-110">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-8 transition-all duration-500 group-hover:scale-105 group-hover:bg-primary/15">
                 <service.icon className="w-7 h-7 text-primary" />
               </div>
               
@@ -56,9 +55,9 @@ export const Services = () => {
               <p className="body-md text-primary font-medium">
                 {service.highlight}
               </p>
-            </AnimatedSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

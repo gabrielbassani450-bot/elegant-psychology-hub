@@ -1,4 +1,4 @@
-import { AnimatedSection, AnimatedText } from "@/components/AnimatedSection";
+import { AnimatedSection, AnimatedText, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { Monitor, Clock, Home, Shield } from "lucide-react";
 
 const benefits = [
@@ -26,7 +26,7 @@ const benefits = [
 
 export const OnlineTherapy = () => {
   return (
-    <section className="section-padding section-alt-bg">
+    <section className="section-padding relative">
       <div className="container-wide">
         <AnimatedSection className="text-center mb-16">
           <span className="body-md text-muted-foreground mb-4 block">
@@ -46,21 +46,20 @@ export const OnlineTherapy = () => {
           </p>
         </AnimatedText>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
-            <AnimatedSection 
-              key={benefit.title} 
-              delay={0.1 + index * 0.1}
-              className="bg-card rounded-2xl p-8 card-elevated text-center"
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" staggerDelay={0.12}>
+          {benefits.map((benefit) => (
+            <StaggerItem 
+              key={benefit.title}
+              className="glass-card rounded-2xl p-8 text-center"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-accent mb-6">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-6">
                 <benefit.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="headline-md mb-3 font-serif">{benefit.title}</h3>
               <p className="body-md text-muted-foreground">{benefit.description}</p>
-            </AnimatedSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

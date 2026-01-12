@@ -7,10 +7,14 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { ScrollBackground } from "@/components/ScrollBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-x-hidden">
+    <div className="min-h-screen overflow-x-hidden relative">
+      {/* Animated scroll background */}
+      <ScrollBackground />
+      
       <Header />
       
       {/* Hero Section */}
