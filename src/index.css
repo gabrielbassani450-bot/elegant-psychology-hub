@@ -93,13 +93,6 @@
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
   }
-  
-  /* Smooth momentum scrolling */
-  @supports (scroll-behavior: smooth) {
-    * {
-      scroll-behavior: smooth;
-    }
-  }
 
   body {
     @apply bg-background text-foreground antialiased;
@@ -176,27 +169,22 @@
     transform: translateY(-2px);
   }
 
-  /* Glassmorphism card style */
+  /* Lightweight glass card style - reduced blur */
   .glass-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
-    transition: all 0.5s cubic-bezier(0.25, 0.4, 0.25, 1);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px -8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
   }
 
   .glass-card:hover {
-    background: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
+    box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.12);
   }
 
-  /* Subtle glass for sections */
+  /* Simple section background */
   .glass-section {
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 

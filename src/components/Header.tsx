@@ -28,9 +28,9 @@ export const Header = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? "bg-white/40 dark:bg-background/40 backdrop-blur-xl shadow-[0_1px_20px_-10px_rgba(0,0,0,0.08)] border-b border-white/10" 
+            ? "bg-white/60 shadow-sm border-b border-white/20" 
             : "bg-transparent"
         }`}
       >
