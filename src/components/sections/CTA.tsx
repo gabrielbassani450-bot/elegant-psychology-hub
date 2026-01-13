@@ -6,8 +6,8 @@ export const CTA = () => {
   const whatsappLink = "https://api.whatsapp.com/send?phone=555481205788";
 
   return (
-    <section className="section-padding section-alt-bg overflow-hidden">
-      <div className="container-narrow text-center relative">
+    <section className="section-padding py-12 md:py-20 section-alt-bg overflow-hidden">
+      <div className="container-narrow text-center relative px-4 md:px-6">
         {/* Decorative elements */}
         <motion.div
           animate={{ 
@@ -27,20 +27,20 @@ export const CTA = () => {
         />
 
         <AnimatedSection>
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-8">
-            <Heart className="w-7 h-7 text-primary" />
+          <div className="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-accent mb-6 md:mb-8">
+            <Heart className="w-5 h-5 md:w-7 md:h-7 text-primary" />
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <h2 className="headline-lg mb-6 text-balance">
+          <h2 className="text-2xl md:headline-lg mb-4 md:mb-6 text-balance">
             Cuidar da saúde mental é um{" "}
             <span className="italic gradient-text">ato de amor próprio</span>
           </h2>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <p className="body-lg text-muted-foreground mb-10 max-w-xl mx-auto">
+          <p className="text-base md:body-lg text-muted-foreground mb-8 md:mb-10 max-w-xl mx-auto">
             Se você sente que chegou o momento de olhar para si com mais carinho 
             e consciência, a terapia pode ser seu próximo passo. Estou aqui para 
             te ajudar.
@@ -52,9 +52,9 @@ export const CTA = () => {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-primary text-primary-foreground rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="inline-flex items-center gap-2 md:gap-3 px-7 py-4 md:px-10 md:py-5 bg-primary text-primary-foreground rounded-full text-base md:text-lg font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg"
           >
-            <MessageCircle className="w-6 h-6" />
+            <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
             Vamos Conversar
           </a>
         </AnimatedSection>
