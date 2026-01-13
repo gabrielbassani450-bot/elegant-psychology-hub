@@ -33,7 +33,7 @@ export const Hero = () => {
 
       {/* Content with scroll fade */}
       <motion.div 
-        className="relative z-10 section-padding container-narrow text-center pt-32"
+        className="relative z-10 section-padding container-narrow text-center pt-24 md:pt-32 px-4 md:px-6"
         style={{ opacity: contentOpacity, y: contentY }}
       >
         <motion.div
@@ -41,7 +41,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="inline-block body-md text-foreground/70 mb-6 font-medium">
+          <span className="inline-block text-sm md:body-md text-foreground/70 mb-4 md:mb-6 font-medium">
             Psicóloga Elisiane Valandro
           </span>
         </motion.div>
@@ -50,7 +50,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="headline-xl text-balance mb-8 text-foreground"
+          className="text-3xl md:headline-xl text-balance mb-5 md:mb-8 text-foreground leading-tight"
         >
           Cuide da sua{" "}
           <span className="gradient-text italic">saúde mental</span>
@@ -62,7 +62,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="body-lg text-foreground/70 max-w-2xl mx-auto mb-12 text-balance"
+          className="text-base md:body-lg text-foreground/70 max-w-2xl mx-auto mb-8 md:mb-12 text-balance"
         >
           Especializada em Terapia Cognitivo Comportamental, Terapia do Esquema 
           e Terapia de Casal. Um espaço seguro para seu autoconhecimento.
@@ -77,9 +77,9 @@ export const Hero = () => {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full body-md font-medium transition-all duration-500 hover:scale-[1.03] hover:shadow-xl"
+            className="inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground rounded-full text-sm md:body-md font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg"
           >
-            <MessageCircle className="w-5 h-5" />
+            <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
             Iniciar Conversa
           </a>
         </motion.div>

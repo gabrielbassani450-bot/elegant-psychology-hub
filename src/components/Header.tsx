@@ -30,14 +30,14 @@ export const Header = () => {
         transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-out ${
           isScrolled 
-            ? "bg-white/70 dark:bg-background/70 backdrop-blur-2xl shadow-[0_1px_30px_-10px_rgba(0,0,0,0.1)] border-b border-white/20" 
+            ? "bg-white/40 dark:bg-background/40 backdrop-blur-xl shadow-[0_1px_20px_-10px_rgba(0,0,0,0.08)] border-b border-white/10" 
             : "bg-transparent"
         }`}
       >
-        <div className="container-wide px-6 md:px-12 lg:px-24">
-          <div className="flex items-center justify-between h-20">
+        <div className="container-wide px-4 md:px-12 lg:px-24">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="#" className="font-serif text-xl md:text-2xl">
+            <a href="#" className="font-serif text-lg md:text-2xl">
               Elisiane Valandro
             </a>
 
@@ -56,7 +56,7 @@ export const Header = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 Contato
@@ -66,10 +66,10 @@ export const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden p-2"
+              className="md:hidden p-1.5 transition-transform duration-200 hover:scale-105 active:scale-95"
               aria-label="Abrir menu"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-5 h-5" />
             </button>
           </div>
         </div>
