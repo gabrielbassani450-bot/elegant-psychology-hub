@@ -56,7 +56,7 @@ export const Header = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-medium transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98]"
               >
                 <MessageCircle className="w-4 h-4" />
                 Contato

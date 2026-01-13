@@ -66,7 +66,7 @@ export const About = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground rounded-full text-sm md:body-md font-medium transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg"
+                className="inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground rounded-full text-sm md:body-md font-medium transition-all duration-300 ease-out hover:scale-105 active:scale-[0.98] hover:shadow-lg"
               >
                 <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
                 Agendar Consulta
