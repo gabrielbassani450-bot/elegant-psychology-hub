@@ -30,7 +30,7 @@ export const Header = () => {
         transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
           isScrolled 
-            ? "bg-white/70" 
+            ? "bg-white/90" 
             : "bg-transparent"
         }`}
       >
